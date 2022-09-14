@@ -1,3 +1,20 @@
+import { WatchList } from "./WatchList.js"
+
+const mainContainer = document.querySelector("#content");
+
+const applicationHTML = `
+<h1>Magnum TV</h1>
+
+<article class="watchlist">
+<section class="detail--column list details__watchlist">
+    <h2>Watch List</h2>
+    ${WatchList()}
+    </section>
+</article>
+`
+
+mainContainer.innerHTML = applicationHTML
+
 /* 
   Magnum TV is a new service that wil revolutionize the way
   people watch television. Here's what the business team has
