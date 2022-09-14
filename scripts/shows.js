@@ -1,0 +1,2 @@
+//A TV watcher wants to see a list of shows. The name of the show and the time they show is broadcast should be in the list. When the show is clicked on, the star of the show should be display in an alert message.
+const shows = () => {}
