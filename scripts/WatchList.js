@@ -1,17 +1,14 @@
-import { getShows } from "./database.js"
+import { getShows, getGenres, getProgramGenreTable } from "./database.js"
 
 const shows = getShows()
-
-function randomDate(start, end) {
-    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
-  }
+const genreList = getGenres()
+const ProgramGenresJoined = getProgramGenreTable()
 
 
 export const WatchList = () => {
     let html = `<ul>`
-    let RandomDate = randomDate(new Date(2022, 0, 1), new Date())
     for (const show of shows) {
-        html += `<li id="show--${show.id}">${show.name} @ ${RandomDate}</li>`
+        html += `<li id="show--${show.id}">${show.name}: ${show.time}</li>`
     }
 
     html += `</ul>`
@@ -19,25 +16,46 @@ export const WatchList = () => {
     return html
 }
 
+const filterShows = (show) => {
+    const MatchingShow = []
+    for (const table of ProgramGenresJoined) {
+        if (table.showId === show.id) {
+            MatchingShow.push(table)
+        }
+    }
+    return MatchingShows
+}
+
+const assignedGenres = (matchedShows) => {
+    let showGenres = []
+    for (const genre of genreList) {
+        for (const match of matchedShows) {
+            if (genre.id === match.genreId) {
+                showGenres.push(genre.name)
+            }
+        }
+    }
+    return showGenres.join(" and ")
+}
+
+
 document.addEventListener(
-    "click", 
+    "click",
     (clickEvent) => {
 
         const itemClicked = clickEvent.target
 
         if (itemClicked.id.startsWith("show")) {
 
-            const [,showPrimaryKey] = itemClicked.id.split("--")
+            const [, showPrimaryKey] = itemClicked.id.split("--")
 
-            let matchingShow = null
             for (const show of shows) {
                 if (parseInt(showPrimaryKey) === show.id) {
-                    matchingShow = show
+                    const matchedShow = filterShows(show)
+                    const assignedGenre = assignedGenres(matchedShow)
+                    window.alert(`${matchingShow.name} has a genre of ${assignedGenre}!`)
                 }
             }
-
-            window.alert(`${matchingShow.name} has a genre of ${matchingShow.type}!`)
         }
     }
-
 )
