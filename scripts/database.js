@@ -1,18 +1,34 @@
 const database = {
-  actors : [
+  actors: [
     {
-      id:1,
-      name:"Arnold Swartz"
+      id: 1,
+      name: "Arnold Swartz"
     },
     {
-      id:2,
+      id: 2,
       name: "Til Murray"
     },
     {
-      id:3,
-      name:"Jim Ferry"
+      id: 3,
+      name: "Jim Ferry"
+    },
+    {
+      id: 4,
+      name: "John Mandy"
+    },
+    {
+      id: 5,
+      name: "Joe Goodman"
+    },
+    {
+      id: 6,
+      name: "Eddie Nurphy"
     }
   ],
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
   programs: [
     {
       id: 1,
