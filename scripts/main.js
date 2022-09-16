@@ -1,11 +1,18 @@
 import { WatchList } from "./WatchList.js"
+import { actorsFunction } from "./actors.js"
 
 const mainContainer = document.querySelector("#content");
 
 const applicationHTML = `
 <h1>Magnum TV</h1>
 
-<article class="watchlist">
+<article class="actors">
+<section class="detail--column list details__actors">
+    <h2>Actors</h2>
+    ${actorsFunction()}
+    </section>
+</article>
+<article class="WatchList">
 <section class="detail--column list details__watchlist">
     <h2>Watch List</h2>
     ${WatchList()}
