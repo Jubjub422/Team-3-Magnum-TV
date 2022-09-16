@@ -329,6 +329,38 @@ const database = {
       id: 9,
       name: "Reality"
     } 
+  ],
+  users: [
+    {
+    id: 1,
+    fullName: "Clyde Fischer",
+    age: 36,
+    favGenre: 'Fantasy'
+    },
+    {
+    id: 2,
+    fullName: "Big Cliff",
+    age: 20,
+    favGenre: 'Romantic'
+    },
+    {
+    id: 3,
+    fullName: "Stuart Little",
+    age: 35,
+    favGenre: 'Documentary'
+    },
+    {
+    id: 4,
+    fullName: "Billy Tube",
+    age: 60,
+    faveGenre: 'Crime'
+    },
+    {
+    id: 5,
+    fullName: "Pitchie Reynolds",
+    age: 40,
+    favGenre: 'Comedy'
+    }
   ]
 }
 
