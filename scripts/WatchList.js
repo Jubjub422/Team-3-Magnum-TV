@@ -23,7 +23,7 @@ const filterShows = (show) => {
             MatchingShow.push(table)
         }
     }
-    return MatchingShows
+    return MatchingShow
 }
 
 const assignedGenres = (matchedShows) => {
