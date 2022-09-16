@@ -1,8 +1,8 @@
-import { getShows, getGenres, getProgramGenreTable } from "./database.js"
+import { getShows, getGenres, getProgramGenres } from "./database.js"
 
 const shows = getShows()
 const genreList = getGenres()
-const ProgramGenresJoined = getProgramGenreTable()
+const ProgramGenresJoined = getProgramGenres()
 
 
 export const WatchList = () => {
@@ -23,7 +23,7 @@ const filterShows = (show) => {
             MatchingShow.push(table)
         }
     }
-    return MatchingShows
+    return MatchingShow
 }
 
 const assignedGenres = (matchedShows) => {
