@@ -87,7 +87,43 @@ const database = {
       name: "Knight Rider",
       time: "Sundays @ 7:00pm"
     }
+  ],
+  users: [
+    {
+      id: 1,
+      name: "Clyde Fischer",
+      age: 36,
+      favGenre: 'Comedy'
+    },
+    {
+      id: 2,
+      name: "Big Cliff",
+      age: 20,
+      favGenre: 'Comedy'
+    },
+    {
+      id: 3,
+      name: "Stuart Little",
+      age: 35,
+      favGenre: 'Comedy'
+    },
+    {
+      id: 4,
+      name: "Billy Tube",
+      age: 60,
+      faveGenre: 'Comedy'
+    },
+    {
+      id: 5,
+      name: "Pitchie Reynolds",
+      age: 40,
+      favGenre: 'Comedy'
+    }
   ]
+}
+
+// * Have an array of users who watch TV. Each user will have
+// a name, an age, and favorite genre.
 }
 
 export const getShows = () => {
