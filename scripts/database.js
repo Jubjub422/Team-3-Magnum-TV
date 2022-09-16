@@ -12,8 +12,7 @@ const database = {
       id:3,
       name:"Jim Ferry"
     }
-],
-
+  ],
   programs: [
     {
       id: 1,
@@ -75,7 +74,111 @@ const database = {
       name: "Knight Rider",
       time: "Sundays @ 7:00pm"
     }
+  ],
+  actorPrograms: [
+    {
+      id: 1,
+      programId: 1,
+      actorId: 5
+    },
+    {
+      id: 2,
+      programId: 2,
+      actorId: 1
+    },
+    {
+      id: 3,
+      programId: 3,
+      actorId: 3
+    },
+    {
+      id: 4,
+      programId: 4,
+      actorId: 4
+    },
+    {
+      id: 5,
+      programId: 5,
+      actorId: 2
+    },
+    {
+      id: 6,
+      programId: 6,
+      actorId: 6
+    },
+    { 
+      id: 7,
+      programId: 7,
+      actorId: 2
+    },
+    {  
+      id: 8,
+      programId: 8,
+      actorId: 5
+    },
+    {
+      id: 9,
+      programId: 9,
+      actorId: 1
+    },
+    {
+      id: 10,
+      programId: 10,
+      actorId: 3
+    },
+    {
+      id: 11,
+      programId: 11,
+      actorId: 6
+    },
+    {
+      id: 12,
+      programId: 12,
+      actorId: 2
+    },
+    {
+      id: 13,
+      programId: 1,
+      actorId: 6
+    },
+    {
+      id: 14,
+      programId: 5,
+      actorId: 2
+    },
+    {
+      id: 15,
+      programId: 6,
+      actorId: 3
+    },
+    {
+      id: 16,
+      programId: 11,
+      actorId: 5
+    },
+    {
+      id: 17,
+      programId: 3,
+      actorId: 4
+    },
+    {
+      id: 18,
+      programId: 7,
+      actorId: 3
+    },
+    {
+      id: 19,
+      programId: 9,
+      actorId: 6
+    },
+    {
+      id: 20,
+      programId: 2,
+      actorId: 2
+    }
+
   ]
+
 }
 
 export const getShows = () => {
