@@ -25,10 +25,7 @@ const database = {
       name: "Eddie Nurphy"
     }
   ],
-<<<<<<< HEAD
-=======
 
->>>>>>> main
   programs: [
     {
       id: 1,
@@ -200,8 +197,4 @@ const database = {
 export const getShows = () => {
 
   return null
-}
-
-export const getActors = () => {
-  return database.actors.map(actor => ({...actor}))
 }
