@@ -25,10 +25,6 @@ const database = {
       name: "Eddie Nurphy"
     }
   ],
-<<<<<<< HEAD
-=======
-
->>>>>>> main
   programs: [
     {
       id: 1,
@@ -192,12 +188,161 @@ const database = {
       programId: 2,
       actorId: 2
     }
-
+  ],
+  programGenres: [
+    {
+      id: 1,
+      programId: 1,
+      genreId: 2
+    },
+    {
+      id: 2,
+      programId: 2,
+      genreId: 3
+    },
+    {
+      id: 3,
+      programId: 3,
+      genreId: 1
+    },
+    {
+      id: 4,
+      programId: 4,
+      genreId: 6
+    },
+    {
+      id: 5,
+      programId: 5,
+      genreId: 5
+    },
+    {
+      id: 6,
+      programId: 6,
+      genreId: 9
+    },
+    {
+      id: 7,
+      programId: 7,
+      genreId: 4
+    },
+    {
+      id: 8,
+      programId: 8,
+      genreId: 7
+    },
+    {
+      id: 9,
+      programId: 9,
+      genreId: 8
+    },
+    {
+      id: 10,
+      programId: 10,
+      genreId: 8
+    },
+    {
+      id: 11,
+      programId: 11,
+      genreId: 2
+    },
+    {
+      id: 12,
+      programId: 12,
+      genreId: 6
+    },
+    {
+      id: 13,
+      programId: 1,
+      genreId: 4
+    },
+    {
+      id: 14,
+      programId: 11,
+      genreId: 9
+    },
+    {
+      id: 15,
+      programId: 8,
+      genreId: 1
+    },
+    {
+      id: 16,
+      programId: 6,
+      genreId: 5
+    },
+    {
+      id: 17,
+      programId: 9,
+      genreId: 7
+    },
+    {
+      id: 18,
+      programId: 2,
+      genreId: 8
+    },
+    {
+      id: 19,
+      programId: 3,
+      genreId: 1
+    },
+    {
+      id: 20,
+      programId: 12,
+      genreId: 3
+    }
+  ],
+  genres: [
+    {
+      id: 1,
+      genre: "Mystery"
+    },
+    {
+      id: 2,
+      genre: "Drama"
+    },
+    {
+      id: 3,
+      genre: "Comedy"
+    },
+    {
+      id: 4,
+      genre: "Crime"
+    },
+    {
+      id: 5,
+      genre: "Romantic"
+    },
+    {
+      id: 6,
+      name: "Sci-Fi"
+    },
+    {
+      id: 7,
+      name: "Documentary"
+    },
+    {
+      id: 8,
+      name: "Fantasy"
+    },    
+    {
+      id: 9,
+      name: "Reality"
+    } 
   ]
-
 }
 
 export const getShows = () => {
-
-  return null
+  return database.programs.map(program => ({...program}))
+}
+export const getActors = () => {
+  return database.actors.map(actor => ({...actor}))
+}
+export const getGenres = () => {
+  return database.genres.map(genre => ({...genre}))
+}
+export const getProgramGenres = () => {
+  return database.programGenres.map(programGenre => ({...programGenre}))
+}
+export const getActorPrograms = () => {
+  return database.actorPrograms.map(actorProgram => ({...actorProgram}))
 }
